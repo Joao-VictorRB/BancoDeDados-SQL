@@ -2,15 +2,15 @@ CREATE DATABASE LIVRARIA;
 USE LIVRARIA;
 
 CREATE TABLE LIVROS(
- idLivro INT PRIMARY KEY AUTO_INCREMENT,
- nomeLivro VARCHAR(100) NOT NULL,
- nomeAutor VARCHAR(255) NOT NULL,
- sexoAutor CHAR(1) NOT NULL,
- numPag INT NOT NULL,
- nomeEditora VARCHAR(60) NOT NULL,
- valorLivro FLOAT(10,2) NOT NULL,
- estadoEditora CHAR(2) NOT NULL,
- anoPublicacao YEAR NOT NULL
+    idLivro INT PRIMARY KEY AUTO_INCREMENT,
+    nomeLivro VARCHAR(100) NOT NULL,
+    nomeAutor VARCHAR(255) NOT NULL,
+    sexoAutor CHAR(1) NOT NULL,
+    numPag INT NOT NULL,
+    nomeEditora VARCHAR(60) NOT NULL,
+    valorLivro FLOAT(10,2) NOT NULL,
+    estadoEditora CHAR(2) NOT NULL,
+    anoPublicacao YEAR NOT NULL
 );
 
 INSERT INTO LIVROS (nomeLivro, nomeAutor, sexoAutor, numPag, nomeEditora, valorLivro, estadoEditora, anoPublicacao)
