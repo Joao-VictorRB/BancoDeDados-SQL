@@ -1,17 +1,4 @@
-CREATE DATABASE LIVRARIA;
 USE LIVRARIA;
-
-CREATE TABLE LIVROS(
-    idLivro INT PRIMARY KEY AUTO_INCREMENT,
-    nomeLivro VARCHAR(100) NOT NULL,
-    nomeAutor VARCHAR(255) NOT NULL,
-    sexoAutor CHAR(1) NOT NULL,
-    numPag INT NOT NULL,
-    nomeEditora VARCHAR(60) NOT NULL,
-    valorLivro FLOAT(10,2) NOT NULL,
-    estadoEditora CHAR(2) NOT NULL,
-    anoPublicacao YEAR NOT NULL
-);
 
 INSERT INTO LIVROS (nomeLivro, nomeAutor, sexoAutor, numPag, nomeEditora, valorLivro, estadoEditora, anoPublicacao)
 VALUES 
@@ -30,11 +17,3 @@ VALUES
 ('Modelagem Dimensional', 'Rafael Pereira', 'M', 350, 'DataHouse', 68.90, 'MG', 2021),
 ('ETL Profissional', 'Larissa Gomes', 'F', 300, 'CodePress', 61.90, 'RJ', 2022),
 ('Governança de Dados', 'Felipe Araújo', 'M', 430, 'Analytics Editora', 94.90, 'DF', 2023);
-
-
-SELECT * FROM LIVROS;
-SELECT nomeLivro, nomeEditora FROM LIVROS;
-SELECT nomeLivro, estadoEditora FROM LIVROS WHERE sexoAutor = 'M';
-SELECT nomeLivro, numPag FROM LIVROS WHERE sexoAutor = 'F';
-SELECT valorLivro FROM LIVROS WHERE estadoEditora = 'SP';
-SELECT  * FROM LIVROS WHERE sexoAutor = 'M' AND estadoEditora = 'SP' OR estadoEditora = 'RJ';
